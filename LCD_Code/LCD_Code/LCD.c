@@ -7,13 +7,14 @@
 
 
 /*LCD command write function*/ 
+#include "HeaderLCD.h"
 #define RS 0b00000001
 #define RW 0b00000010
 #define EN 0b00000100
-#define LCD_Data_Port PORTD
-#define LCD_Cmd_Port PORTC
-#define LCD_Cmd_Dir DDRC
-#define LCD_Data_Dir DDRD
+#define LCD_Data_Port PORTD 0b00000000
+#define LCD_Cmd_Port PORTC 0b00000000
+#define LCD_Cmd_Dir DDRC 0b00000000
+#define LCD_Data_Dir DDRD 0b00000000
 void LCD_Cmd(unsigned char cmd){ 
 	LCD_Data_Port = cmd; 
 	LCD_Cmd_Port &= ~(1<<RS); /* RS=0 command reg. */ 
