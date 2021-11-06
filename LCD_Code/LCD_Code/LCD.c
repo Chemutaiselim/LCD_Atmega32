@@ -8,7 +8,13 @@
 
 /*LCD command write function*/ 
 
-
+#define RS PC0
+#define RW PC1
+#define EN PC2
+#define LCD_Data_Port PORTD 
+#define LCD_Cmd_Port PORTC 
+#define LCD_Cmd_Dir DDRC 
+#define LCD_Data_Dir DDRD 
 
 void LCD_Cmd(unsigned char cmd){ 
 	LCD_Data_Port = cmd; 
