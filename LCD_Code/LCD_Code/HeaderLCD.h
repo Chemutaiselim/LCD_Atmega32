@@ -9,6 +9,7 @@
 #ifndef HEADERLCD_H_
 #define HEADERLCD_H_
 
+
 /*Function Declarations*/ 
 void LCD_Cmd(unsigned char cmd); 
 void LCD_Char(unsigned char char_data); 
