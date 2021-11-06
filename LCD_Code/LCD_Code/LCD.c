@@ -8,6 +8,10 @@
 
 /*LCD command write function*/ 
 
+#define F_CPU 8000000UL
+#include <avr/io.h>
+#include <util/delay.h>
+
 #define RS PC0
 #define RW PC1
 #define EN PC2
@@ -64,3 +68,14 @@ void LCD_String (char *str){
 		LCD_Char(str[i]); 
 		} 
 		}
+		
+/*Send string to LCD with xy position */ 
+void LCD_String_xy (char row, char pos, char *str){ 
+	if (row == 0 && pos<16){ 
+		LCD_Cmd((pos & 0x0F)|0x80);/* Command of first row and required position<16 */ 
+		} 
+		else if (row == 1 && pos<16){ 
+			LCD_Cmd((pos & 0x0F)|0xC0);/* Command of second row and required position<16 */ 
+			} 
+			LCD_String(str); /* Call LCD string function */
+}
