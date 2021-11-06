@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef HEADERLCD_H_
-#define HEADERLCD_H_
+#ifndef LCD_H_
+#define LCD_H_
 
 
 
@@ -21,4 +21,4 @@ void LCD_String_xy(char row, char pos, char *str);
 
 
 
-#endif /* HEADERLCD_H_ */
+#endif /*LCD_H_ */
