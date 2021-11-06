@@ -11,6 +11,14 @@
 #include <util/delay.h>
 #include "HeaderLCD.h"
 
+#define RS PC0
+#define RW PC1
+#define EN PC2
+#define LCD_Data_Port PORTD
+#define LCD_Cmd_Port PORTC
+#define LCD_Cmd_Dir DDRC
+#define LCD_Data_Dir DDRD
+
 /*Our main program*/ 
 int main(void) { 
 	LCD_Init(); /* Initialize LCD */ 
