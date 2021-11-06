@@ -9,7 +9,7 @@
 #define F_CPU 8000000UL 
 #include <avr/io.h>  
 #include <util/delay.h>
-#include "HeaderLCD.h"
+#include "LCD.h"
 
 #define RS PC0
 #define RW PC1
