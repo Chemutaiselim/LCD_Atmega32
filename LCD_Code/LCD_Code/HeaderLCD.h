@@ -9,6 +9,14 @@
 #ifndef HEADERLCD_H_
 #define HEADERLCD_H_
 
+#define RS 0b00000001
+#define RW 0b00000010
+#define EN 0b00000100
+#define LCD_Data_Port PORTD
+#define LCD_Cmd_Port PORTC
+#define LCD_Cmd_Dir DDRC
+#define LCD_Data_Dir DDRD
+
 
 /*Function Declarations*/ 
 void LCD_Cmd(unsigned char cmd); 
